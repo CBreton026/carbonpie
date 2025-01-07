@@ -1,0 +1,41 @@
+# Help
+# https://www.geeksforgeeks.org/read-and-write-toml-files-using-python/
+
+# Project info
+title = "My TOML Config"
+
+# Paths
+[paths]
+countries = "YOUR_PATH/data/UNSD-Methodology-Updated.csv"
+data = "YOUR_PATH/data/large_files/PMSSPBIE_05Feb20.csv"
+sql_glob = "YOUR_PATH/src/carbonpie/sql/*.sql"
+fig_dir = "YOUR_PATH"
+
+# Run parameters
+[params]
+target_countries = ["CAN", "EARTH"]
+un_groups = [
+    "ANNEXI",
+    "AOSIS",
+    "BASIC",
+    "EARTH",
+    "EU28",
+    "LDC",
+    "NONANNEXI",
+    "UMBRELLA",
+]
+remaining_budget = [250, 500, 940] # ref Lamboll2023
+historic_start_year = [1850]
+start_year = [2010]
+end_year = [2100]
+pcc_weighting_factor = 0.5
+ecpc_discount_rate = [0.02]
+
+# Database info
+[database]
+chunksize = 25_000
+path = "YOUR_PATH/data/large_files/rawdata.db"
+name = "my_database"
+version = "1.0.0"
+updated = 2000-01-01
+author = "you"
